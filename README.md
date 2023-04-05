@@ -1,15 +1,12 @@
-# LazCWizard
-"Create, Edit, Build and Run "C" projects using the Lazarus IDE!"
 	LazC Wizard	[by jmpessoa]
 		
-		"Create, Edit, Build and Run "C" projects using the Lazarus IDE!"
-
-		"A helper/assistant to "LazC" package  [\lazarus\components\compilers\c]
+		"Create, Edit, Build and Run "C" projects using the "Lazarus IDE" and "Tiny C Compiler"!"
 
 		ref.	https://github.com/jmpessoa/lazcwizard
 
 
-Version 0.1 [TinyCC Edition]  - 10 January - 2019
+Version 0.1: 10-January-2019
+Version 0.2: 05-April-2023
 
 
 1. Install Tiny C Compiler [tcc]
@@ -17,12 +14,12 @@ Version 0.1 [TinyCC Edition]  - 10 January - 2019
 	1.1.1	win32:	http://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27-win32-bin.zip
 		win64:	http://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27-win64-bin.zip
 
-		-download and unzip the "tcc-0.9.27-win?-bin.zip" file 
+		.download and unzip the "tcc-0.9.27-win?-bin.zip" file 
 
 		
 	1.1.2	Linux: http://download.savannah.gnu.org/releases/tinycc/tcc-0.9.27.tar.bz2
 		
-		-download and unpack "tcc-0.9.27.tar.bz2" file
+		.download and unpack "tcc-0.9.27.tar.bz2" file
 
 		$cd "to unpacked tcc directory" 
 		$chmod +x configure 
@@ -35,16 +32,23 @@ Version 0.1 [TinyCC Edition]  - 10 January - 2019
 	2.1.	download/clone:	https://github.com/jmpessoa/lazcwizard
 	2.2.	[unzip]
 	2.3.	Intall
-			Lazarus IDE menu "Package" --> "Open Package File (.lpk)"	
-			select/open	"LazCWizard.lpk"
+			2.3.1 Lazarus IDE menu "Package" --> "Open Package File (.lpk)"	
+			select/open	"LazCWizard.lpk"	[folder "LazCWizard"]
+		
+			"Compile"
+			"Use" --> "Install"
+
+			2.3.2 Lazarus IDE menu "Package" --> "Open Package File (.lpk)"	
+			select/open	"lazcwcompletion.lpk"	[folder "LazCWizardUtils"]
 		
 			"Compile"
 			"Use" --> "Install"
 
 
 3. Using LazC Wizard
+
 	
-3.1 Create and Build/Run New [template/executable] Project
+3.1[Create a Executable] New Project
 
 	.Lazarus IDE "Project" --> "New Project" --> "LazCW Project" 
 
@@ -60,15 +64,15 @@ Version 0.1 [TinyCC Edition]  - 10 January - 2019
 		"New Project Name"
 			ex.	"LazCProject1"     -->  "lazcproject1.c"     
 
-		[ ] Launch Terminal  
-			[x] if you need interactive data input...
+		[x] Launch Terminal  			
 
-		(.) Executable
+		Select: (.) Executable
 			
-	.Lazarus IDE "Run" --> "[LazCW] Build/Run C"
+	.Lazarus IDE "Run" --> "[LazCW] Compile/Build "C"
+	.Success! From terminal execute your "lazcproject1" !!
 
-3.2 Create and Build/Run New [template/shared lib] Project
 
+3.2 [Create a Shared Lib]
 	.Lazarus IDE "Project" --> "New Project" --> "LazCW Project" 
 
 		"New Project Name"
@@ -76,13 +80,11 @@ Version 0.1 [TinyCC Edition]  - 10 January - 2019
 
 		[x] Launch Terminal  
 
-		(.) Shared Lib
+		Select: (.) Shared Lib
 						
-	.Lazarus IDE "Run" --> "[LazCW] Build/Run C"
+	.Lazarus IDE "Run" --> "[LazCW] Compile/Build/ "C"
 
 		.Go to your project folder "LazCShared1"
-			Hint: "paste" path-to-project from clipboard to cmd/terminal...
-
 
 		>dir		[win]
 
@@ -94,8 +96,7 @@ Version 0.1 [TinyCC Edition]  - 10 January - 2019
 
 			liblazcshared1.so
 			lazcshared1.pp	 <--- [auto generated] pascal [unit] interface header file!  
-                                               WARNING: may require some modification/fixes  
-
+                                               WARNING: may require some modification/fixes
 
 
 3.2.1 Using the "lazcshared1" Library in a Pascal program	
@@ -118,7 +119,6 @@ Version 0.1 [TinyCC Edition]  - 10 January - 2019
 		.Go to your project folder "LazCShared1"
 
 		>Project1.exe			[win]
-
 
 		$export LD_LIBRARY_PATH=./	[linux]
 		$.\project1	
@@ -166,12 +166,9 @@ Version 0.1 [TinyCC Edition]  - 10 January - 2019
 				printf("\n sum = %d \n", addTwoInt(5,8) ); /* test */
 			}
 
-			
-			warning! tinyCC comments: 
-					/* test */   
+			warning! tinyCC comments:  /* this is commented */   
 
-
-	.[Test it !] Lazarus IDE "Run" --> "[LazCW] Build/Run C"  
+	.[Test it !] Lazarus IDE "Run" --> "[LazCW] Compile/Build C"  
 
 		Hint: "paste" path-to-project from clipboard to cmd/terminal...
 
@@ -203,7 +200,7 @@ Version 0.1 [TinyCC Edition]  - 10 January - 2019
 
 		extern int addTwoInt(int a, int b);
 
-	.Lazarus IDE "Run" --> "[LazCW] Build/Run C"  
+	.Lazarus IDE "Run" --> "[LazCW] Compile/Build C"  
 
 		.Go to your project folder "LazCProject2"
 			Hint: "paste" path-to-project from clipboard to cmd/terminal...
@@ -249,3 +246,5 @@ Version 0.1 [TinyCC Edition]  - 10 January - 2019
 			[or]
 
 		$.\run.sh project2		[linux]	
+
+Thanks to All!
