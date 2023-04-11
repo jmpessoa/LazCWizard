@@ -275,6 +275,16 @@ begin
             '    putchar(ch1);'+LineEnding+
             '  }while(ch1 != EOF);');
 
+
+  FList.Add('int main(int argc, char *argv[])'+LineEnding+
+            '  {'+LineEnding+
+            '    int i; '+LineEnding+
+            '    for(i = 0; i < argc; i++) {'+LineEnding+
+            '      printf("%s\n", argv[i]);' +LineEnding+
+            '    }'+LineEnding+
+            '    return 0;'+LineEnding+
+            '  }'
+            );
   FLastPrefix:=Prefix;
   RebuildFilteredList;
 end;

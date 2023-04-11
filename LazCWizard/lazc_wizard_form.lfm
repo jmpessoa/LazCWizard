@@ -202,9 +202,9 @@ object FormLazCWizard: TFormLazCWizard
     OnClick = SpeedButton3Click
   end
   object CheckBoxInteractive: TCheckBox
-    Left = 363
+    Left = 399
     Height = 24
-    Top = 160
+    Top = 164
     Width = 132
     Anchors = [akTop, akRight]
     Caption = 'Launch Terminal'
@@ -498,7 +498,7 @@ object FormLazCWizard: TFormLazCWizard
     Top = 48
   end
   object OpenDir: TOpenDialog
-    Left = 344
-    Top = 208
+    Left = 288
+    Top = 72
   end
 end

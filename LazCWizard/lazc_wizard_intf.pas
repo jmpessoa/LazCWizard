@@ -327,7 +327,7 @@ begin
     begin
       if LazCWProjectDescriptor.PathToImportCode = '' then
       begin
-        NewSource.Add('main()');
+        NewSource.Add('int main(void)');  //int argc, char *argv[]
         NewSource.Add('{');
         NewSource.Add('  printf("\n Hello C World! \n");');
         NewSource.Add('  return 0;');
